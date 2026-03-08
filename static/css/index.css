@@ -35,8 +35,8 @@ body {
   font-size: 16px;
   background-color: var(--background-primary);
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url('../images/fpv.jpg');
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)),
+    url('../images/background-robot.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -294,6 +294,46 @@ body {
   color: var(--text-secondary);
   margin-top: 1rem;
   font-weight: 500;
+}
+
+/* Video Grid Card Styling */
+.video-card {
+  background: var(--background-secondary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-card video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #000;
+}
+
+.video-caption {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-align: center;
 }
 
 /* Pagination and Misc Improvements */
