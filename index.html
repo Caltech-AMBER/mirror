@@ -231,6 +231,21 @@
                     </a>
                   </div>
 
+                  <div style="margin-top: 30px;">
+                    <p style="font-size: 16px; font-weight: 500; color: #333; margin-bottom: 15px;">This work is supported by:</p>
+                    <div style="display: flex; justify-content: center; gap: 50px; align-items: center; flex-wrap: wrap;">
+                      <a href="" target="_blank" style="display: flex; align-items: center;">
+                        <img src="static/mirror/tii-color.png" alt="TII" style="height: 50px; width: auto;">
+                      </a>
+                      <a href="" target="_blank" style="display: flex; align-items: center;">
+                        <img src="static/mirror/Dow_Chemical_Company_logo.svg" alt="Dow" style="height: 50px; width: auto;">
+                      </a>
+                      <a href="" target="_blank" style="display: flex; align-items: center;">
+                        <img src="static/mirror/WR.png" alt="WR" style="height: 50px; width: auto;">
+                      </a>
+                    </div>
+                  </div>
+
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
@@ -310,8 +325,7 @@
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://youtu.be/LvwIwOTTu9g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/LvwIwOTTu9g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -443,24 +457,18 @@
 <!-- End Video Gallery Grid -->
 
 <script>
-// Auto-play videos when they scroll into view
+// Play videos on hover, pause on mouse leave
 document.addEventListener('DOMContentLoaded', function() {
   const videos = document.querySelectorAll('video');
   
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.play();
-      } else {
-        entry.target.pause();
-      }
-    });
-  }, {
-    threshold: 0.5 // Video must be 50% visible to auto-play
-  });
-  
   videos.forEach(video => {
-    observer.observe(video);
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+    
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+    });
   });
 });
 </script>
